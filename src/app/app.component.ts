@@ -12,6 +12,10 @@ export class AppComponent {
   placeholder = '練習placeholder';
   background = 'blue';
 
+  todos = [];
+
+  todoValue;
+
   newtodo(inputElement) {
     // 查看event 屬性
     // console.log(event);
