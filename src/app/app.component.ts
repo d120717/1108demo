@@ -12,8 +12,10 @@ export class AppComponent {
   appTitle = '練習Todo';
   placeholder = '練習placeholder';
 
-    todo(event) {
-    console.log(event);
+    newtodo(event, inputElement) {
+      if (event.code === 'Enter') {
+        console.log(inputElement.value);
+      }
   }
 }
 
