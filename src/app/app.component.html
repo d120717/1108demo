@@ -29,7 +29,8 @@
             [checked]="todo.isCompleted"
             (change)="toggleComplete(todo)"
           />
-          <label> {{ todo.value }}</label> <button class="destroy" (click)="remove(idx)"></button>
+          <label> {{ todo.value }}</label>
+          <button class="destroy" (click)="remove(idx, todo)"></button>
         </div>
         <input class="edit" value="Create a TodoMVC template" />
       </li>
