@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { toUnicode } from 'punycode';
+import { isComponent } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-root',
@@ -30,5 +31,8 @@ export class AppComponent {
   }
   toggleComplete(todo) {
     todo.isCompleted = !todo.isCompleted;
+  }
+  allcompleted() {
+    this.todos.forEach(todo => (todo.isCompleted = true));
   }
 }
