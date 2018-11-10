@@ -1,3 +1,4 @@
+import { DataService } from './data.service';
 import { Component } from '@angular/core';
 import { toUnicode } from 'punycode';
 import { isComponent } from '@angular/core/src/render3/util';
@@ -13,29 +14,43 @@ export class AppComponent {
   placeholderText = '練習placeholder';
   background = 'blue';
 
-  todos = [];
-
   todoValue;
+
+  get todos() {
+    return this.dataService.todos;
+  }
+
+  constructor(protected dataService: DataService) {}
 
   newtodo(inputElement) {
     // 查看event 屬性
     // console.log(event);
 
     // push 加入迴圈
-    this.todos.push({
-      isCompleted: true,
-      value: this.todoValue,
-    });
+    //   this.todos.push({
+    //     isCompleted: true,
+    //     value: this.todoValue,
+    //   });
+    //   this.todoValue = '';
+    // }
+    this.dataService.newTodo(this.todoValue);
     this.todoValue = '';
-    console.log(this.todos);
   }
+
   toggleComplete(todo) {
-    todo.isCompleted = !todo.isCompleted;
+    this.dataService.toggleComplete(todo);
   }
   allCompleted() {
-    this.todos.forEach(todo => (todo.isCompleted = true));
+    this.dataService.allCompleted();
   }
-  remove(idx) {
-    this.todos.splice(idx, 1);
+  remove(idx, todo) {
+    this.dataService.remove(idx, todo);
+  }
+
+  completefilter() {
+    this.dataService.completefilter();
+  }
+  fillfilter() {
+    this.dataService.fillfilter();
   }
 }

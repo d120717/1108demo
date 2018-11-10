@@ -1,3 +1,4 @@
+import { DataService } from './data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,16 +8,9 @@ import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TestComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, TestComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [DataService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
