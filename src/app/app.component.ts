@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'demo';
   appTitle = '練習Todo';
   placeholder = '練習placeholder';
+  background = 'blue'
 
     newtodo(inputElement) {
         // 查看event 屬性
