@@ -1,16 +1,5 @@
-import { Component } from '@angular/core';
 import { of, Observable, forkJoin } from 'rxjs';
 import { tap, map, mergeMap, concatMap, delay } from 'rxjs/operators';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'demo';
-  appTitle = '練習Todo';
-}
 
 const obs1 = of([1, 2, 3]).pipe(delay(1700));
 const obs2 = of([4, 5, 6]).pipe(delay(600));
