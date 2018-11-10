@@ -9,7 +9,7 @@ import { toUnicode } from 'punycode';
 export class AppComponent {
   title = 'demo';
   appTitle = '練習Todo';
-  placeholder = '練習placeholder';
+  placeholderText = '練習placeholder';
   background = 'blue';
 
   todos = [];
@@ -20,7 +20,12 @@ export class AppComponent {
     // 查看event 屬性
     // console.log(event);
 
-    this.todos.push(inputElement.value);
+    // push 加入迴圈
+    this.todos.push({
+      isCompleted: false,
+      value: this.todoValue,
+    });
+
     console.log(this.todos);
   }
 }
