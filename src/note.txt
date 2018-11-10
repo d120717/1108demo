@@ -1,0 +1,13 @@
+快速建立component
+ng g c
+ng g s
+ng g d
+
+
+
+{{ 變數}}
+[value]="變數"
+(click)="action()"
+[(ngModel)]="變數"
+template reference variable :#hero
+other component element: <hero-detail></hero-detail>
