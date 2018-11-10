@@ -19,6 +19,8 @@ export class AppComponent {
   newtodo(inputElement) {
     // 查看event 屬性
     // console.log(event);
-    console.log(inputElement.value);
+
+    this.todos.push(inputElement.value);
+    console.log(this.todos);
   }
 }
