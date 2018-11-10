@@ -22,10 +22,13 @@ export class AppComponent {
 
     // push 加入迴圈
     this.todos.push({
-      isCompleted: false,
+      isCompleted: true,
       value: this.todoValue,
     });
-
+    this.todoValue = '';
     console.log(this.todos);
+  }
+  toggleComplete(todo) {
+    todo.isCompleted = !todo.isCompleted;
   }
 }

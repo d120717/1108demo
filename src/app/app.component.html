@@ -23,7 +23,12 @@
       <!-- ngFor  = 迴圈 -->
       <li *ngFor="let todo of todos">
         <div class="view">
-          <input class="toggle" type="checkbox" [checked]="todo.isCompleted" />
+          <input
+            class="toggle"
+            type="checkbox"
+            [checked]="todo.isCompleted"
+            (change)="toggleComplete(todo)"
+          />
           <label> {{ todo.value }}</label> <button class="destroy"></button>
         </div>
         <input class="edit" value="Create a TodoMVC template" />
@@ -55,4 +60,5 @@
 </section>
 
 <!-- <router-outlet></router-outlet> -->
+<code>{{ todos | json }}</code>
 <app-test></app-test>
