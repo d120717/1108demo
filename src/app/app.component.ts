@@ -13,9 +13,9 @@ export class AppComponent {
   placeholder = '練習placeholder';
 
     newtodo(event, inputElement) {
-      if (event.code === 'Enter') {
+        // 查看event 屬性
+        // console.log(event);
         console.log(inputElement.value);
-      }
   }
 }
 
