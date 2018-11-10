@@ -12,7 +12,7 @@ export class AppComponent {
   appTitle = '練習Todo';
   placeholder = '練習placeholder';
 
-    newtodo(event, inputElement) {
+    newtodo(inputElement) {
         // 查看event 屬性
         // console.log(event);
         console.log(inputElement.value);
