@@ -9,6 +9,7 @@ import { tap, map, mergeMap, concatMap, delay } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'demo';
+  appTitle = 'test';
 }
 
 const obs1 = of([1, 2, 3]).pipe(delay(1700));
