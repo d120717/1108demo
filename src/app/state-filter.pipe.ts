@@ -11,6 +11,9 @@ export class StateFilterPipe implements PipeTransform {
     if (state === 'completed') {
       return value.filter(x => x.isCompleted === false);
     }
+    if (state === 'search') {
+      // return value.filter(x => x.value === );
+    }
     return value;
   }
 }
