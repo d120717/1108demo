@@ -6,7 +6,7 @@ export class DataService {
 
   constructor() {}
 
-  completefilter() {
+  completefilter(): any {
     this.todos = this.todos.filter(x => x.isCompleted === true);
   }
 
@@ -19,12 +19,6 @@ export class DataService {
 
   toggleComplete(todo) {
     todo.isCompleted = !todo.isCompleted;
-  }
-  fillfilter() {
-    this.todos = this.todos.filter(x => x.isCompleted === false);
-  }
-  allCompleted() {
-    this.todos.forEach(todo => (todo.isCompleted = true));
   }
   remove(idx, todo) {
     this.todos.splice(idx, 1);

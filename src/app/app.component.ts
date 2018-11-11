@@ -40,17 +40,11 @@ export class AppComponent {
   toggleComplete(todo) {
     this.dataService.toggleComplete(todo);
   }
-  allCompleted() {
-    this.dataService.allCompleted();
-  }
   remove(idx, todo) {
     this.dataService.remove(idx, todo);
   }
 
   completefilter() {
     this.dataService.completefilter();
-  }
-  fillfilter() {
-    this.dataService.fillfilter();
   }
 }
